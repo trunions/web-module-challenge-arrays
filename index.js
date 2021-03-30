@@ -66,14 +66,11 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(arr){
-    if(arr.length = 31){
-        console.log(true);
-    }else{
-        console.log(false);
-    }
- }
+    return arr.length === 31
+  }
+  
+  console.log(is31Flavors(originalFlavors));
  
- is31Flavors(originalFlavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -93,7 +90,7 @@ function addFlavor(arr, newFlavor){
    return arr
  }
  
- console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
+ //console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -181,10 +178,17 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
-}
-
+function filterByWord(arr, string) {
+    const newArray = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].includes(string)) {
+        newArray.push(arr[i]);
+      }
+    }
+    return newArray;
+  }
+  
+  console.log(filterByWord(originalFlavors, "Chocolate"));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
